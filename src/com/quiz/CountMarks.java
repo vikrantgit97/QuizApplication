@@ -1,7 +1,7 @@
 package com.quiz;
 
 public class CountMarks {
-    static int marks ;
+    private static int marks ;
 
     public int getMarks() {
         marks++;
