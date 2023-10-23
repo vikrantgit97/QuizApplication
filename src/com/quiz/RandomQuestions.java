@@ -11,15 +11,18 @@ import java.util.Scanner;
 public class RandomQuestions {
 
     public void getRandomQuestions() throws SQLException, ClassNotFoundException {
-        ConnectionDetail co = new ConnectionDetail();
-        Connection con = co.getConnectionDetails();
-        PreparedStatement ps = con.prepareStatement("select distinct * from mcq order by rand() limit 10");
-        ResultSet resultSet = ps.executeQuery();
+        Connection con = ConnectionDetail.getConnectionDetails();
+        PreparedStatement preparedStatement = con.prepareStatement("select distinct * from mcq order by rand() limit 10");
+        ResultSet resultSet = preparedStatement.executeQuery();
+        con.close();
+        preparedStatement.close();
         Scanner sc = new Scanner(System.in);
         while (resultSet.next()) {    //retrieve employee data
 
-            System.out.println("\nQ." + resultSet.getString(1) + " " + resultSet.getString(2));
-            System.out.print("\nEnter Answer eg. A,B,C,D : ");
+            System.out.println("\nQ." + resultSet.getString(1)
+                    + " " + resultSet.getString(2)
+                    + "\nEnter Answer eg. A,B,C,D : ");
+
             String Answer = sc.next();
 
             if (Answer.equals("A") || Answer.equals("B") || Answer.equals("C") || Answer.equals("D")) {
@@ -28,6 +31,8 @@ public class RandomQuestions {
                     count.getMarks();
                 }
             } else {
+                resultSet.close();
+                sc.close();
                 throw new InvalidInputException("InvalidInputException..... enter only eg. A,B,C,D ");
             }
         }

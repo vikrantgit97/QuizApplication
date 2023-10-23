@@ -23,11 +23,11 @@ public class CreateTableMcqs {
                     TotalMarks INT
                 )
                 """;
-        Statement st = con.createStatement();
-        st.execute(sql);
-        st.execute(sqlCreate);
-        //System.out.println("table created sucessfully....");
-        st.close();
+        Statement statement = con.createStatement();
+        statement.execute(sql);
+        statement.execute(sqlCreate);
+        System.out.println("table created successfully....");
+        statement.close();
         con.close();
     }
 }

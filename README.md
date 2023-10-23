@@ -1,8 +1,7 @@
 # Quiz Application 
+
 * Manually Add the Mysql connector JAR to Your Project
 * in IntelliJ IDEA or any IDE, right-click on the JAR file and select Add as Library.
-
-* [Install any LINUX OS or Ubuntu for Development (Recommended) ](https://releases.ubuntu.com/jammy/)<img src="https://assets.ubuntu.com/v1/a7e3c509-Canonical%20Ubuntu.svg" style="height: 50px">
 
 ## Requirements
 Make sure to have the followings installed:
@@ -11,8 +10,6 @@ Make sure to have the followings installed:
 
 * To run locally
     - MySQL Server
+    - JDK 1.7+
 
-## Getting Started
-To get started with this project, you will need to have the following installed on your local machine:
-
-* JDK 1.7+
+## [Install any LINUX based OS or Ubuntu for Development (Recommended) ](https://releases.ubuntu.com/jammy/)<img src="https://assets.ubuntu.com/v1/a7e3c509-Canonical%20Ubuntu.svg" style="height: 50px">

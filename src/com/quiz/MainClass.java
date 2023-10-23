@@ -5,12 +5,14 @@ import java.util.Scanner;
 public class MainClass {
 
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("                     * WELCOME TO GENERAL KNOWLEDGE QUIZ *                   ");
+
         try {
-            System.out.println("                     * WELCOME TO GENERAL KNOWLEDGE QUIZ *                   ");
 
             CreateTableMcqs.getCreateTableMcqs();
             InsertQuestions.getInsertQuestions();
-            Scanner scanner = new Scanner(System.in);
 
             while (true) {
                 System.out.print("\nPress 5 to START QUIZ or Press 6 to retrieve student`s data using StudentId: ");
@@ -35,6 +37,7 @@ public class MainClass {
 
             }
         } catch (Exception e) {
+            scanner.close();
             e.printStackTrace();
         }
     }
