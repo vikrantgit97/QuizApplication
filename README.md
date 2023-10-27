@@ -10,6 +10,6 @@ Make sure to have the followings installed:
 
 * To run locally
     - MySQL Server
-    - JDK 1.7+
+    - JDK 1.7+ 
 
 ## [Install any LINUX based OS or Ubuntu for Development (Recommended) ](https://releases.ubuntu.com/jammy/)<img src="https://assets.ubuntu.com/v1/a7e3c509-Canonical%20Ubuntu.svg" style="height: 50px">
